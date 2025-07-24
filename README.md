@@ -4,15 +4,9 @@
 
 MVSTF utilizes sequential point clouds to generate multi-view images and feature differences, and designs  multi-branch network to extract spatio-temporal and dimensional features in parallel, and realizes high-precision moving object segmentation. 
 
-![](/home/zjj_260G/doctor/A1_lidar_mos/modify/final_version/MVSTF/figures/overview.png)
+![](./figures/overview.png)
 
-#### Visualization 
-
-Visualization of MOS results on SemanticKITTI validation set.   
-
-![](/home/zjj_260G/doctor/A1_lidar_mos/modify/final_version/MVSTF/figures/MVSTFA.gif)
-
-​                                         
+​                                 
 
 #### 1 Environment Setup
 
