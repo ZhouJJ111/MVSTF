@@ -1,0 +1,3 @@
+Epoch_mos 17; static iou: 0.9994866; static pre: 0.99960655; static rec: 0.99988; moving iou: 0.85600483; moving pre: 0.96206933; moving rec: 0.8859031; mean iou: 0.9277457
+Epoch_mos 18; static iou: 0.99944574; static pre: 0.9995455; static rec: 0.99990016; moving iou: 0.8429255; moving pre: 0.9670595; moving rec: 0.86784315; mean iou: 0.9211856
+Epoch_mos 27; static iou: 0.99945116; static pre: 0.999558; static rec: 0.9998931; moving iou: 0.8450879; moving pre: 0.9652487; moving rec: 0.8716067; mean iou: 0.9222695
