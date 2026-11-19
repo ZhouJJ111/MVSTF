@@ -1,0 +1,26 @@
+[
+  {
+    "sha256": "12d8f5b3f5561dd70bd77f1a8fbf50793f581da3aff32b9a328ad0595a8ffa68",
+    "bytes": 20473479,
+    "historical_training_config_certified": false,
+    "filename": "semantickitti-85.60.pth",
+    "google_drive_url": "https://drive.google.com/file/d/1_wA9ASMtmvhuM1hDznrqTvnR8hOg0kQ8/view?usp=drive_link",
+    "config": "config/config_smvf_sgd_ohem_vfe_k8_fp16_48epoch.py"
+  },
+  {
+    "sha256": "2895969437366664062175c889c27c02bad2709de40b7df4a25729c619442ff8",
+    "bytes": 20463791,
+    "historical_training_config_certified": false,
+    "filename": "semantickitti-84.51.pth",
+    "google_drive_url": "https://drive.google.com/file/d/17pI5SGKVOjii4Ed1nXeEC5bwSzViPyse/view?usp=drive_link",
+    "config": "config/config_mvstf_84_51.py"
+  },
+  {
+    "sha256": "f8eefccac5596ac1172a7c64ffc59c9e1e8043baae0aa4cc4cfbc4ccda3454e2",
+    "bytes": 20473479,
+    "historical_training_config_certified": false,
+    "filename": "kitti-road-89.76497.pth",
+    "google_drive_url": "https://drive.google.com/file/d/15Vm_JDQpG1OTzp66cr1lNeZ-Xw0IcFJy/view?usp=drive_link",
+    "config": "config/config_smvf_sgd_ohem_vfe_k8_fp16_48epoch.py"
+  }
+]

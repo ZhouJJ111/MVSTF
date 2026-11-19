@@ -1,3 +1,5 @@
+import os
+
 def get_config():
     class General:
         log_frequency = 100
@@ -5,8 +7,7 @@ def get_config():
         batch_size_per_gpu = 2
         fp16 = True           # False
 
-        # SeqDir = '/home/hddData/zjjData/SemanticKITTI/dataset/sequences'
-        SeqDir = '/home/TrueNasDir/zhoujj/DataSets/SemanticKITTI/dataset/sequences'
+        SeqDir = os.environ.get('MVSTF_DATA_ROOT', 'SemanticKITTI/dataset/sequences')
         category_list = ['static', 'moving']
         category_list_single = ["car", "bicycle", "motorcycle", "truck", "other-vehicle",
                                   "person", "bicyclist", "motorcyclist", "road", "parking",

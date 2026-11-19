@@ -1,0 +1,14 @@
+{
+  "status": "strict_cpu_load_pass",
+  "config": "config/config_smvf_sgd_ohem_vfe_k8_fp16_48epoch.py",
+  "model": "mvf_vfe.AttNet",
+  "checkpoint": "kitti-road-89.76497.pth",
+  "checkpoint_sha256": "f8eefccac5596ac1172a7c64ffc59c9e1e8043baae0aa4cc4cfbc4ccda3454e2",
+  "torch": "1.10.1+cu111",
+  "state_dict_entries": 669,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "forward_executed": false,
+  "cuda_kernels_executed": false,
+  "scope": "CPU parameter loading only; not inference or numerical reproduction"
+}

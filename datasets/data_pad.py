@@ -286,7 +286,7 @@ class DataloadVal(Dataset):
         
         seq_num = config.seq_num
         # add training data
-        seq_split = [str(i).rjust(2, '0') for i in self.task_cfg_mos['split']['valid']]
+        seq_split = [str(i).rjust(2, '0') for i in getattr(config, 'sequences', self.task_cfg_mos['split']['valid'])]
         for seq_id in seq_split:
             fpath = os.path.join(config.SeqDir, seq_id)
             fpath_pcd = os.path.join(fpath, 'velodyne')

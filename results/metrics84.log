@@ -1,0 +1,17 @@
+Evaluated 250/4071 frames; latest=000249
+Evaluated 500/4071 frames; latest=000499
+Evaluated 750/4071 frames; latest=000749
+Evaluated 1000/4071 frames; latest=000999
+Evaluated 1250/4071 frames; latest=001249
+Evaluated 1500/4071 frames; latest=001499
+Evaluated 1750/4071 frames; latest=001749
+Evaluated 2000/4071 frames; latest=001999
+Evaluated 2250/4071 frames; latest=002249
+Evaluated 2500/4071 frames; latest=002499
+Evaluated 2750/4071 frames; latest=002749
+Evaluated 3000/4071 frames; latest=002999
+Evaluated 3250/4071 frames; latest=003249
+Evaluated 3500/4071 frames; latest=003499
+Evaluated 3750/4071 frames; latest=003749
+Evaluated 4000/4071 frames; latest=003999
+{"frames": 4071, "overall": {"confusion_rows_gt_columns_prediction": [[484467314, 52220], [213662, 1450459]], "classes": {"static": {"tp": 484467314, "fp": 213662, "fn": 52220, "support": 484519534, "iou": 0.9994514879480216, "precision": 0.9995591698239049, "recall": 0.9998922231275819}, "moving": {"tp": 1450459, "fp": 52220, "fn": 213662, "support": 1664121, "iou": 0.84508789337317, "precision": 0.9652487324305458, "recall": 0.8716066920614547}}, "mean_iou": 0.9222696906605958, "valid_points": 486183655, "metric_scale": "fraction_0_to_1", "undefined_metric_policy": "null; never silently replace undefined values with zero"}, "output": "results/metrics84.json"}

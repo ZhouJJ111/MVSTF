@@ -107,7 +107,7 @@ def val_fp16(epoch, model, val_loader, category_list, category_list_single, save
 
 
         mean_runtime = np.mean(runtime)
-        print(f'seq 08 mean runtime {mean_runtime}')
+        print(f'Legacy unsynchronized network wall time: {mean_runtime}; not an end-to-end benchmark')
         metric_cate = criterion_cate.get_metric()
         metric_cate_single = criterion_cate_single.get_metric()
 
@@ -161,11 +161,19 @@ def main(args, config):
 
     # save_path_prediction = os.path.join("experiments/prediction", prefix)
 
+    if args.output_dir:
+        if os.path.exists(args.output_dir) and os.listdir(args.output_dir):
+            raise FileExistsError('Use a fresh output directory: ' + args.output_dir)
+        model_prefix = args.output_dir
+    os.makedirs(model_prefix, exist_ok=True)
+
     # reset dist
     torch.cuda.set_device(args.local_rank)
     torch.distributed.init_process_group(backend='nccl', init_method='env://')      # 注意：--nproc_per_node=1与GPU数量要一致
     world_size = torch.distributed.get_world_size()
     rank = torch.distributed.get_rank()
+    if args.checkpoint and (world_size != 1 or args.start_epoch != args.end_epoch):
+        raise ValueError('--checkpoint requires one GPU and start_epoch == end_epoch')
 
     # define dataloader
     val_dataset = eval('datasets.{}.DataloadVal'.format(pDataset.Val.data_src))(pDataset.Val)
@@ -183,7 +191,7 @@ def main(args, config):
     for epoch in range(args.start_epoch, args.end_epoch + 1, world_size):
         if (epoch + rank) < (args.end_epoch + 1):
             pretrain_model = os.path.join(model_prefix, '{}-model.pth'.format(epoch + rank))
-            model.load_state_dict(torch.load(pretrain_model, map_location='cpu'))
+            model.load_state_dict(torch.load(args.checkpoint or pretrain_model, map_location='cpu'))
             if pGen.fp16:
                 val_fp16(epoch + rank, model, val_loader, pGen.category_list, pGen.category_list_single, model_prefix, rank)
             else:
@@ -193,6 +201,8 @@ def main(args, config):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='lidar segmentation')
     parser.add_argument('--config', help='config file path', type=str)
+    parser.add_argument('--checkpoint', help='Explicit checkpoint path')
+    parser.add_argument('--output-dir', help='Fresh output directory for logs and predictions')
     parser.add_argument('--local_rank', type=int, default=0)
 
     parser.add_argument('--start_epoch', type=int, default=0)

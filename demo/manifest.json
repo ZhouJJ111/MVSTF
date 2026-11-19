@@ -1,0 +1,75 @@
+{
+  "title": "MVSTF 85.60 archived predictions",
+  "kind": "CPU BEV rendering of archived predictions; not live inference",
+  "config_sha256": "58f82271c2f9d29844c73ce2bcc7eec103b71560be8257b39dc74ea8fa7e3133",
+  "view": "x/y in [-50,50] m; forward x is up; counts use all points; no point subsampling",
+  "frames": [
+    {
+      "frame": "000000",
+      "points": 123389,
+      "displayed_points": 120095,
+      "tp": 606,
+      "fp": 25,
+      "fn": 522,
+      "moving_iou": 0.5255854293148309,
+      "points_sha256": "92e945f37a6cd4a58acc8aa15b275af2e271ecf69c0a44a311d888524473c451",
+      "gt_sha256": "cd33562bda69c88e09a4d8f600cb5c254186bf20d695897a61d56b129ff1c7d3",
+      "pred_sha256": "e3a1a3069bd776eb4d22da8e41198352599052563102c518aa7d3b31930e0a32",
+      "image_sha256": "9c32294a96897ee99622371ebd719677fb7f06ed0b4cdce74bf034645061b1dc"
+    },
+    {
+      "frame": "001000",
+      "points": 126624,
+      "displayed_points": 124047,
+      "tp": 698,
+      "fp": 0,
+      "fn": 12,
+      "moving_iou": 0.9830985915492958,
+      "points_sha256": "f81b9df45136afb7d2cb388e07afe9fa2d1287fdedc45effbdc14b0f99f70214",
+      "gt_sha256": "ae5ea78d9a3ac817f0d7c2eedbde5c7b5ecbe438c9f91e857ae4c173c255c69d",
+      "pred_sha256": "a14d023d41f3baccc02b889d2eb5d0bf9f6a7112cfab84d880c78b05393e6b8c",
+      "image_sha256": "e533166538335f0597a2810622da1fa2e5b6a7f8e07f1f0595c804aa056c1d4a"
+    },
+    {
+      "frame": "002000",
+      "points": 125149,
+      "displayed_points": 122857,
+      "tp": 1080,
+      "fp": 158,
+      "fn": 57,
+      "moving_iou": 0.833976833976834,
+      "points_sha256": "15b8589cc1d203966b8055a159178bb2706e9eec491c6d840c4ec460d65532a4",
+      "gt_sha256": "aeed60683ac8e3174d08d79d679068847beb471690b942d7e35caae49dc13baa",
+      "pred_sha256": "1914673b60ac689cd59c6b019b7ba35e89569bc23469c4a332797d0e7cb770c4",
+      "image_sha256": "318804e85cf62a998ff688503ec059fc4e96e306a6bf6064898fb62a02c193b8"
+    },
+    {
+      "frame": "003000",
+      "points": 115018,
+      "displayed_points": 111876,
+      "tp": 536,
+      "fp": 7,
+      "fn": 126,
+      "moving_iou": 0.8011958146487295,
+      "points_sha256": "8b8b5f5cdf0c3fef6e93a9861af8c7b228651112049e5443776b38510fc6d486",
+      "gt_sha256": "91924febda1941c1f91aa9efd1d4eb27e71ce95c8bd6551e23d62bda04c339c1",
+      "pred_sha256": "d1517b7e57631e8e694e00959bdec29cc80e744fdc0e9657865d71b275a2859e",
+      "image_sha256": "f555dd21bd2fdbac1d5dcb29b780037dd2df9a78b7269406e42524ef4fd8b2f3"
+    },
+    {
+      "frame": "004000",
+      "points": 123976,
+      "displayed_points": 121445,
+      "tp": 1199,
+      "fp": 2,
+      "fn": 75,
+      "moving_iou": 0.9396551724137931,
+      "points_sha256": "d59410f600a92eb987db2cf08a36f3de5298e1bbf433ee4ad0a7b5e7030ffe30",
+      "gt_sha256": "8e01f1db8989725fe17bb5ff42adca902a4a03f043f7ea0e77ff14d6095a4257",
+      "pred_sha256": "94f03f10807f24e3965d5d3d54378a2959d074520a1cc6747f0eabb8f2f6968a",
+      "image_sha256": "f65ca378f4b59c85d54146e27ea5ec66029848eb7fde9b173a8a07ea9bbe2aed"
+    }
+  ],
+  "metrics": "results/metrics85.json",
+  "metrics_sha256": "60a85d9638b69e39a40c061eb21c19982e61c90726b727eaa0bb0d9d30e3df15"
+}
